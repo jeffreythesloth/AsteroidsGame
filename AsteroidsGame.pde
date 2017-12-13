@@ -1,16 +1,16 @@
 Floater bob = new Spaceship();
-Asteroid [] bobs = new Asteroid[5];
+ArrayList <Asteroid> bobs = new ArrayList<Asteroid>();
 Star[] nightSky = new Star[200];
 public void setup()
 {
   size(400,400);
-  for (int i = 0; i < bobs.length; i++)
-  {
-    bobs[i] = new Asteroid();
-  }
   for (int i = 0; i < nightSky.length; i++)
   {
     nightSky[i] = new Star();
+  }
+  for (int j = 0; j < 10; j++)
+  {
+    bobs.add(new Asteroid());
   }
 }
 public void draw()
@@ -18,14 +18,22 @@ public void draw()
   background(0);
   bob.show();
   bob.move();
-  for (int i = 0; i < bobs.length; i++)
-  {
-    bobs[i].show();
-    bobs[i].move();
-  }
   for (int i = 0; i < nightSky.length; i++)
   {
     nightSky[i].show();
+  }
+  for (int j = 0; j < bobs.size(); j++)
+  {
+    float d = dist(bob.getX(),bob.getY(),bobs.get(j).getX(),bobs.get(j).getY()); 
+    if (d < 20)
+    {
+      bobs.remove(j);
+    }
+    else
+    {
+      bobs.get(j).move();
+      bobs.get(j).show();
+    }
   }
 }
 public void keyPressed()
