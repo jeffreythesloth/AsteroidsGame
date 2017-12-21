@@ -23,10 +23,7 @@ class Bullet extends Floater
   
   public void show()
   {
-    for (int nI = 0; nI < corners; nI++)
-    {
-      ellipse(10,10,200,200);
-      color(0,0,255);
-    }
+   ellipse(10,10,200,200);
+   fill(0,0,255);
   }
 }

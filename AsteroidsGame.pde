@@ -32,6 +32,7 @@ public void draw()
     else
     {
       bobs.get(j).move();
+      System.out.println(bobs.get(j).getX());
       bobs.get(j).show();
     }
   }
