@@ -11,15 +11,15 @@ class Bullet extends Floater
     myColor = color(0,255,0);
   }
   public void setX(int x){myCenterX = x;}
-  public int getX(){return(int)myCenterX;}
+  public int getX(){return (int)myCenterX;}
   public void setY(int y){myCenterY = y;}
-  public int getY(){return(int)myCenterY;}
+  public int getY(){return (int)myCenterY;}
   public void setDirectionX(double x){myDirectionX = x;}
-  public double getDirectionX(){return(double)myDirectionX;}
+  public double getDirectionX(){return myDirectionX;}
   public void setDirectionY(double y){myDirectionY = y;}
-  public double getDirectionY(){return(double)myDirectionY;}
+  public double getDirectionY(){return myDirectionY;}
   public void setPointDirection(int degrees){myPointDirection = degrees;}
-  public double getPointDirection(){return(double)myPointDirection;}
+  public double getPointDirection(){return myPointDirection;}
   
   public void show()
   {
